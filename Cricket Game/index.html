@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket Game: Bat, Ball, Stump</title>
+ <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>Cricket Game: Bat, Ball, Stump</h1>
+    <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+  <main>
+    <section id="game">
+      <div class="options">
+        <div class="option">
+          <!-- Replace with your own images if needed -->
+          <img src="images/Bat.jpg" alt="Bat" />
+          <button onclick="finalResult('Bat')">Bat</button>
+        </div>
+        <div class="option">
+          <img src="images/Ball.jpg" alt="Ball" />
+          <button onclick="finalResult('Ball')">Ball</button>
+        </div>
+        <div class="option">
+          <img src="images/Stump.jpg" alt="Stump" />
+          <button onclick="finalResult('Stump')">Stump</button>
+        </div>
+      </div>
+      <div id="result"></div>
+      <button id="resetScore" onclick="resetScore()">Reset Score</button>
+    </section>
+    <section id="scoreboard">
+      <h2>Scoreboard</h2>
+      <p id="scoreDisplay">Wins: 0 | Losses: 0 | Ties: 0</p>
+    </section>
+    <section id="history">
+      <h2>Game History</h2>
+      <ul id="historyList"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Cricket Game. All rights reserved.</p>
+  </footer>
+  
+  <!-- Instructions Modal -->
+  <div id="instructionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>How to Play</h2>
+      <p>Select one of the options (Bat, Ball, Stump) to play.</p>
+      <p><strong>Rules:</strong> Bat beats Ball, Ball beats Stump, Stump beats Bat.</p>
+      <p>Keep track of your wins, losses, and ties. Have fun!</p>
+    </div>
+  </div>
+  
+  <script src="index.js"></script>
+    
+</body>
+</html>

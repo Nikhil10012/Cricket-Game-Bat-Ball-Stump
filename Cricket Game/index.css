@@ -1,0 +1,153 @@
+ /* Base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header, footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #5c4caf;
+      color: #fff;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+    }
+    /* Dark mode toggle button */
+    #darkToggle {
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    /* Game container */
+    #game {
+      background-color: rgba(27, 210, 167, 0.8);
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+    .options {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s;
+    }
+    .option img {
+      height: 100px;
+      width: 100px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .option img:hover {
+      transform: scale(1.1);
+    }
+    button {
+      background-color: #5c4caf;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: transform 0.2s ease, background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+    #result {
+      font-size: 18px;
+      white-space: pre-line;
+      margin: 10px 0;
+    }
+    /* Scoreboard and history */
+    #scoreboard, #history {
+      background-color: #fff;
+      width: 90%;
+      max-width: 600px;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #scoreboard h2, #history h2 {
+      margin-top: 0;
+    }
+    #historyList {
+      list-style: none;
+      padding: 0;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    /* Dark mode styles */
+    body.dark {
+      background-color: #222;
+      color: #eee;
+    }
+    body.dark header, body.dark footer {
+      background-color: #333;
+    }
+    body.dark #game {
+      background-color: #444;
+    }
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      text-align: left;
+    }
+    .modal-content h2 {
+      margin-top: 0;
+    }
+    .modal-content .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .modal-content .close:hover,
+    .modal-content .close:focus {
+      color: #000;
+    }
